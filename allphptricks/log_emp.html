@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="shortcut icon" href="../wp-content/uploads/2018/04/aile-bioline-fabicon.png"  />
+<title>Aile Bioline &#8211; Your Pathway to Good Healthcare</title></head>
+
+<body>
+<script type="text/javascript">
+function showMe (it, box) {
+var vis = (box.checked) ? "block" : "none";
+document.getElementById(it).style.display = vis;
+}
+</script>
+<form method="post" action="val_log_emp.php">
+	<font face="Trebuchet MS" size="+1">Select Employee Login Type : </font>
+  <input type="radio" name="CustomerT" value="Establishment" onclick="showMe('div1', this)">
+<br /><br /><br />
+<div id="div1" style="display:none">
+<!--CORPORATION:<input type="radio" value="Male" name="CORPORATION">:<br />
+SINGLE PROPRIETORSHIP :<input type="radio" value="SINGLE_PROPRIETORSHIP " name="gender">:<br />-->
+<select name="username">
+<option value="Agent">AGENT</option>
+<option value="Admin">ADMIN</option>
+</select><br />
+<br />
+		<input type="submit" name="login"  class="form-submit-button"></span></div>
+	</div>       
+</form>
+</body>
+</html>

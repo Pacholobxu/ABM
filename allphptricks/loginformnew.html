@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="logstyle.css" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {font-family: "Trebuchet MS"}
+-->
+</style>
+</head>
+
+<body>
+<h3 align="center" >&nbsp;</h3>
+<form action="valLog.php" method="post" id="frmLogin">
+
+  <div class="error-message"><?php echo "Please Login First"?><?php if(isset($message)) { echo $message; } ?></div>	
+	<div class="field-group">
+		<div><label for="password"><span class="style1">Select a Type of Customer:</span></label>
+		</div>
+	  <div></div>
+	</div>
+	<div class="field-group">
+    <div><br />
+Walk-In and Customers already Registered : 
+  <input type="radio" value="Walk-In" name="CustomerT">:<br />
+<script type="text/javascript">
+function showMe (it, box) {
+var vis = (box.checked) ? "block" : "none";
+document.getElementById(it).style.display = vis;
+}
+</script>
+
+Establishment: <input type="radio" name="CustomerT" value="Establishment" onclick="showMe('div1', this)">
+
+<div id="div1" style="display:none">
+<!--CORPORATION:<input type="radio" value="Male" name="CORPORATION">:<br />
+SINGLE PROPRIETORSHIP :<input type="radio" value="SINGLE_PROPRIETORSHIP " name="gender">:<br />-->
+<select name="Establishment_Type">
+<option value="CORPORATION">CORPORATION</option>
+<option value="SINGLE PROPRIETORSHIP">SINGLE PROPRIETORSHIP</option>
+</select><br />
+</div><br />
+		<div><input type="submit" name="login" value="Login" class="form-submit-button"></span></div>
+  </div>       
+</form>
+</body>
+</html>
